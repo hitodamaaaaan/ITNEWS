@@ -43,8 +43,8 @@
                     システム概要 & 目的
                 </h2>
                 <div class="space-y-4 text-slate-800 text-base leading-loose">
-                    <p><strong class="text-slate-900">目的:</strong> エンジニア向けに最適化されたITニュース・技術トレンド収集プラットフォームを提供する。多言語ソース（日本・グローバル）からの情報集約、AIによる要約、およびユーザーごとの効率的な情報管理（ブックマーク・既読管理・個人メモ）を単一のWebインターフェース上で実現する。</p>
-                    <p><strong class="text-slate-900">対象ユーザー:</strong> ITエンジニア、開発者、テックリード、インフラエンジニアなど、最新技術動向を迅速にキャッチアップしたい個人プロフェッショナル。</p>
+                    <p><strong class="text-slate-900">目的:</strong> エンジニア向けに最適化されたITニュース・技術トレンド収集プラットフォームを提供する。多言語ソース（日本・グローバル）からの情報集約、AIによる要約、およびユーザーごとの効率的な情報管理（ブックマーク・既読管理・個人メモ）を単一のWebインターフェース上で実現する[cite: 1]。</p>
+                    <p><strong class="text-slate-900">対象ユーザー:</strong> ITエンジニア、開発者、テックリード、インフラエンジニアなど、最新技術動向を迅速にキャッチアップしたい個人プロフェッショナル[cite: 1]。</p>
                 </div>
             </section>
 
@@ -55,19 +55,19 @@
                     画面レイアウト・UI設計
                 </h2>
                 <div class="space-y-4 text-slate-800 text-base leading-relaxed">
-                    <p>本システムはモダンな3カラムダッシュボードUI（デスクトップ最適化 / レスポンシブ対応）を採用しています。</p>
+                    <p>本システムはモダンな3カラムダッシュボードUI（デスクトップ最適化 / レスポンシブ対応）を採用しています[cite: 1]。</p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4">
                         <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
                             <h3 class="font-bold text-slate-900 text-lg mb-2">左サイドバー</h3>
-                            <p class="text-sm text-slate-700 leading-relaxed">ロゴ、ダークモード、日本/グローバル切替タブ、カテゴリ一覧、ビューフィルタ（すべて・ブックマーク・既読・トレンド）。</p>
+                            <p class="text-sm text-slate-700 leading-relaxed">ロゴ、ダークモード、日本/グローバル切替タブ、カテゴリ一覧、ビューフィルタ（すべて・ブックマーク・既読・トレンド）[cite: 1]。</p>
                         </div>
                         <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
                             <h3 class="font-bold text-slate-900 text-lg mb-2">中央メインコンテンツ</h3>
-                            <p class="text-sm text-slate-700 leading-relaxed">インクリメンタル検索バー、期間フィルタ、フィード更新、サムネイル付き記事一覧カード。</p>
+                            <p class="text-sm text-slate-700 leading-relaxed">インクリメンタル検索バー、期間フィルタ、フィード更新、サムネイル付き記事一覧カード[cite: 1]。</p>
                         </div>
                         <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
                             <h3 class="font-bold text-slate-900 text-lg mb-2">右スライドパネル</h3>
-                            <p class="text-sm text-slate-700 leading-relaxed">記事詳細、言語切替（日本語/原文）、AIローカル要約、マイメモ入力欄（自動保存）、関連記事リンク。</p>
+                            <p class="text-sm text-slate-700 leading-relaxed">記事詳細、言語切替（日本語/原文）、AIローカル要約、マイメモ入力欄（自動保存）、関連記事リンク[cite: 1]。</p>
                         </div>
                     </div>
                 </div>
@@ -81,11 +81,11 @@
                 </h2>
                 <div class="space-y-3 text-slate-800 text-base">
                     <ul class="list-disc list-inside space-y-3 leading-relaxed">
-                        <li><strong class="text-slate-900">リージョン管理:</strong> 国内テックブログとグローバルメディア（Hacker News等）のスコープ切り替え。</li>
-                        <li><strong class="text-slate-900">検索・フィルタリング:</strong> キーワード（タイトル・ソース・タグ）および期間（24時間以内/7日以内/全期間）による絞り込み。</li>
-                        <li><strong class="text-slate-900">パーソナライズ管理:</strong> 詳細パネル表示に伴う自動既読化、ワンクリックのブックマーク登録、ユーザー独自の「マイメモ」自動保存機能。</li>
-                        <li><strong class="text-slate-900">AI要約 & 多言語対応:</strong> 長文記事の重要ポイント箇条書き要約、および日本語翻訳と原文の切り替え表示。</li>
-                        <li><strong class="text-slate-900">ITトレンド可視化:</strong> Chart.jsを用いた主要技術スタック（AI/LLM、React、Kube等）のトレンド指数推移グラフ（モーダル表示）。</li>
+                        <li><strong class="text-slate-900">リージョン管理:</strong> 国内テックブログとグローバルメディア（Hacker News等）のスコープ切り替え[cite: 1]。</li>
+                        <li><strong class="text-slate-900">検索・フィルタリング:</strong> キーワード（タイトル・ソース・タグ）および期間（24時間以内/7日以内/全期間）による絞り込み[cite: 1]。</li>
+                        <li><strong class="text-slate-900">パーソナライズ管理:</strong> 詳細パネル表示に伴う自動既読化、ワンクリックのブックマーク登録、ユーザー独自の「マイメモ」自動保存機能[cite: 1]。</li>
+                        <li><strong class="text-slate-900">AI要約 & 多言語対応:</strong> 長文記事の重要ポイント箇条書き要約、および日本語翻訳と原文の切り替え表示[cite: 1]。</li>
+                        <li><strong class="text-slate-900">ITトレンド可視化:</strong> Chart.jsを用いた主要技術スタック（AI/LLM、React、Kube等）のトレンド指数推移グラフ（モーダル表示）[cite: 1]。</li>
                     </ul>
                 </div>
             </section>
@@ -96,7 +96,8 @@
                     <span class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-base font-bold mr-3">4</span>
                     データ構造スキーマ (Article Object)
                 </h2>
-                <div class="bg-slate-900 text-slate-100 p-5 rounded-xl text-sm font-mono overflow-x-auto leading-relaxed shadow-inner">
+                <!-- 背景を明るいグレー(bg-slate-100)にし、文字を濃い色(text-slate-900)にしてコントラストを改善 -->
+                <div class="bg-slate-100 border border-slate-300 text-slate-900 p-5 rounded-xl text-sm font-mono overflow-x-auto leading-relaxed shadow-inner">
 <pre>{
   "id": "string (一意の識別子)",
   "region": "string ('jp' または 'global')",
@@ -129,18 +130,18 @@
                     <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
                         <h3 class="font-bold text-slate-900 text-lg mb-3">技術スタック</h3>
                         <ul class="list-disc list-inside space-y-2 text-slate-700">
-                            <li>Markup: HTML5 / Tailwind CSS (v3)</li>
-                            <li>Icons: Lucide Icons</li>
-                            <li>Chart: Chart.js</li>
-                            <li>Script: Vanilla JavaScript (SPA設計)</li>
+                            <li>Markup: HTML5 / Tailwind CSS (v3)[cite: 1]</li>
+                            <li>Icons: Lucide Icons[cite: 1]</li>
+                            <li>Chart: Chart.js[cite: 1]</li>
+                            <li>Script: Vanilla JavaScript (SPA設計)[cite: 1]</li>
                         </ul>
                     </div>
                     <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
                         <h3 class="font-bold text-slate-900 text-lg mb-3">非機能要件</h3>
                         <ul class="list-disc list-inside space-y-2 text-slate-700">
-                            <li>ダークモード対応（Class toggle）</li>
-                            <li>スムーズなスライドパネルアニメーション</li>
-                            <li>ローカルステートによる高速な応答性</li>
+                            <li>ダークモード対応（Class toggle）[cite: 1]</li>
+                            <li>スムーズなスライドパネルアニメーション[cite: 1]</li>
+                            <li>ローカルステートによる高速な応答性[cite: 1]</li>
                         </ul>
                     </div>
                 </div>
@@ -148,7 +149,7 @@
         </div>
 
         <footer class="mt-12 pt-6 border-t border-slate-300 text-center text-sm font-medium text-slate-600">
-            &copy; 2026 TechFeed Complete Pro Edition. All Rights Reserved.
+            &copy; 2026 TechFeed Complete Pro Edition. All Rights Reserved.[cite: 1]
         </footer>
     </div>
 </body>
