@@ -8,95 +8,95 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans leading-relaxed">
+<body class="bg-slate-100 text-slate-900 font-sans leading-relaxed text-base">
     <div class="max-w-5xl mx-auto px-6 py-12">
         <!-- Header -->
-        <header class="border-b border-slate-200 pb-6 mb-8 flex items-center justify-between">
+        <header class="border-b border-slate-300 pb-6 mb-8 flex items-center justify-between">
             <div>
-                <span class="text-xs font-semibold px-3 py-1 bg-indigo-50 text-indigo-600 rounded-full">System Specification v1.0</span>
-                <h1 class="text-3xl font-extrabold tracking-tight mt-2 text-slate-900">TechFeed Complete システム仕様書</h1>
-                <p class="text-sm text-slate-500 mt-1">ITニュース収集・トレンド分析プラットフォーム 要件定義および基本設計書</p>
+                <span class="text-xs font-bold px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">System Specification v1.0</span>
+                <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mt-3 text-slate-900">TechFeed Complete システム仕様書</h1>
+                <p class="text-base text-slate-700 mt-2 font-medium">ITニュース収集・トレンド分析プラットフォーム 要件定義および基本設計書</p>
             </div>
-            <button onclick="window.print()" class="px-4 py-2 bg-slate-900 text-white rounded-xl text-sm font-medium hover:bg-slate-800 transition-colors shadow-sm">
+            <button onclick="window.print()" class="px-5 py-2.5 bg-slate-900 text-white rounded-xl text-sm font-semibold hover:bg-slate-800 transition-colors shadow-md">
                 PDF / 印刷
             </button>
         </header>
 
         <!-- Navigation / TOC -->
-        <div class="bg-white border border-slate-200 rounded-2xl p-6 mb-8 shadow-sm">
-            <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">目次</h2>
-            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm font-medium text-brand-600">
-                <li><a href="#section-1" class="hover:underline text-indigo-600">1. システム概要 & 目的</a></li>
-                <li><a href="#section-2" class="hover:underline text-indigo-600">2. 画面レイアウト・UI設計</a></li>
-                <li><a href="#section-3" class="hover:underline text-indigo-600">3. 主要機能仕様</a></li>
-                <li><a href="#section-4" class="hover:underline text-indigo-600">4. データ構造スキーマ</a></li>
-                <li><a href="#section-5" class="hover:underline text-indigo-600">5. 技術スタック・非機能要件</a></li>
+        <div class="bg-white border border-slate-300 rounded-2xl p-6 mb-8 shadow-sm">
+            <h2 class="text-sm font-bold text-slate-700 uppercase tracking-wider mb-3">目次</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-base font-semibold">
+                <li><a href="#section-1" class="hover:underline text-indigo-700">1. システム概要 & 目的</a></li>
+                <li><a href="#section-2" class="hover:underline text-indigo-700">2. 画面レイアウト・UI設計</a></li>
+                <li><a href="#section-3" class="hover:underline text-indigo-700">3. 主要機能仕様</a></li>
+                <li><a href="#section-4" class="hover:underline text-indigo-700">4. データ構造スキーマ</a></li>
+                <li><a href="#section-5" class="hover:underline text-indigo-700">5. 技術スタック・非機能要件</a></li>
             </ul>
         </div>
 
         <!-- Content Sections -->
         <div class="space-y-10">
             <!-- Section 1 -->
-            <section id="section-1" class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
-                <h2 class="text-xl font-bold mb-4 flex items-center text-slate-900">
-                    <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm font-bold mr-3">1</span>
+            <section id="section-1" class="bg-white border border-slate-300 rounded-2xl p-8 shadow-sm">
+                <h2 class="text-2xl font-bold mb-4 flex items-center text-slate-900 border-b border-slate-100 pb-3">
+                    <span class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-base font-bold mr-3">1</span>
                     システム概要 & 目的
                 </h2>
-                <div class="space-y-4 text-slate-600 text-sm">
-                    <p><strong>目的:</strong> エンジニア向けに最適化されたITニュース・技術トレンド収集プラットフォームを提供する。多言語ソース（日本・グローバル）からの情報集約、AIによる要約、およびユーザーごとの効率的な情報管理（ブックマーク・既読管理・個人メモ）を単一のWebインターフェース上で実現する。</p>
-                    <p><strong>対象ユーザー:</strong> ITエンジニア、開発者、テックリード、インフラエンジニアなど、最新技術動向を迅速にキャッチアップしたい個人プロフェッショナル。</p>
+                <div class="space-y-4 text-slate-800 text-base leading-loose">
+                    <p><strong class="text-slate-900">目的:</strong> エンジニア向けに最適化されたITニュース・技術トレンド収集プラットフォームを提供する。多言語ソース（日本・グローバル）からの情報集約、AIによる要約、およびユーザーごとの効率的な情報管理（ブックマーク・既読管理・個人メモ）を単一のWebインターフェース上で実現する。</p>
+                    <p><strong class="text-slate-900">対象ユーザー:</strong> ITエンジニア、開発者、テックリード、インフラエンジニアなど、最新技術動向を迅速にキャッチアップしたい個人プロフェッショナル。</p>
                 </div>
             </section>
 
             <!-- Section 2 -->
-            <section id="section-2" class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
-                <h2 class="text-xl font-bold mb-4 flex items-center text-slate-900">
-                    <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm font-bold mr-3">2</span>
+            <section id="section-2" class="bg-white border border-slate-300 rounded-2xl p-8 shadow-sm">
+                <h2 class="text-2xl font-bold mb-4 flex items-center text-slate-900 border-b border-slate-100 pb-3">
+                    <span class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-base font-bold mr-3">2</span>
                     画面レイアウト・UI設計
                 </h2>
-                <div class="space-y-4 text-slate-600 text-sm">
+                <div class="space-y-4 text-slate-800 text-base leading-relaxed">
                     <p>本システムはモダンな3カラムダッシュボードUI（デスクトップ最適化 / レスポンシブ対応）を採用しています。</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                            <h3 class="font-bold text-slate-800 mb-1">左サイドバー</h3>
-                            <p class="text-xs text-slate-500">ロゴ、ダークモード、日本/グローバル切替タブ、カテゴリ一覧、ビューフィルタ（すべて・ブックマーク・既読・トレンド）。</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4">
+                        <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                            <h3 class="font-bold text-slate-900 text-lg mb-2">左サイドバー</h3>
+                            <p class="text-sm text-slate-700 leading-relaxed">ロゴ、ダークモード、日本/グローバル切替タブ、カテゴリ一覧、ビューフィルタ（すべて・ブックマーク・既読・トレンド）。</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                            <h3 class="font-bold text-slate-800 mb-1">中央メインコンテンツ</h3>
-                            <p class="text-xs text-slate-500">インクリメンタル検索バー、期間フィルタ、フィード更新、サムネイル付き記事一覧カード。</p>
+                        <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                            <h3 class="font-bold text-slate-900 text-lg mb-2">中央メインコンテンツ</h3>
+                            <p class="text-sm text-slate-700 leading-relaxed">インクリメンタル検索バー、期間フィルタ、フィード更新、サムネイル付き記事一覧カード。</p>
                         </div>
-                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                            <h3 class="font-bold text-slate-800 mb-1">右スライドパネル</h3>
-                            <p class="text-xs text-slate-500">記事詳細、言語切替（日本語/原文）、AIローカル要約、マイメモ入力欄（自動保存）、関連記事リンク。</p>
+                        <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                            <h3 class="font-bold text-slate-900 text-lg mb-2">右スライドパネル</h3>
+                            <p class="text-sm text-slate-700 leading-relaxed">記事詳細、言語切替（日本語/原文）、AIローカル要約、マイメモ入力欄（自動保存）、関連記事リンク。</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- Section 3 -->
-            <section id="section-3" class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
-                <h2 class="text-xl font-bold mb-4 flex items-center text-slate-900">
-                    <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm font-bold mr-3">3</span>
+            <section id="section-3" class="bg-white border border-slate-300 rounded-2xl p-8 shadow-sm">
+                <h2 class="text-2xl font-bold mb-4 flex items-center text-slate-900 border-b border-slate-100 pb-3">
+                    <span class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-base font-bold mr-3">3</span>
                     主要機能仕様
                 </h2>
-                <div class="space-y-3 text-slate-600 text-sm">
-                    <ul class="list-disc list-inside space-y-2">
-                        <li><strong>リージョン管理:</strong> 国内テックブログとグローバルメディア（Hacker News等）のスコープ切り替え。</li>
-                        <li><strong>検索・フィルタリング:</strong> キーワード（タイトル・ソース・タグ）および期間（24時間以内/7日以内/全期間）による絞り込み。</li>
-                        <li><strong>パーソナライズ管理:</strong> 詳細パネル表示に伴う自動既読化、ワンクリックのブックマーク登録、ユーザー独自の「マイメモ」自動保存機能。</li>
-                        <li><strong>AI要約 & 多言語対応:</strong> 長文記事の重要ポイント箇条書き要約、および日本語翻訳と原文の切り替え表示。</li>
-                        <li><strong>ITトレンド可視化:</strong> Chart.jsを用いた主要技術スタック（AI/LLM、React、Kube等）のトレンド指数推移グラフ（モーダル表示）。</li>
+                <div class="space-y-3 text-slate-800 text-base">
+                    <ul class="list-disc list-inside space-y-3 leading-relaxed">
+                        <li><strong class="text-slate-900">リージョン管理:</strong> 国内テックブログとグローバルメディア（Hacker News等）のスコープ切り替え。</li>
+                        <li><strong class="text-slate-900">検索・フィルタリング:</strong> キーワード（タイトル・ソース・タグ）および期間（24時間以内/7日以内/全期間）による絞り込み。</li>
+                        <li><strong class="text-slate-900">パーソナライズ管理:</strong> 詳細パネル表示に伴う自動既読化、ワンクリックのブックマーク登録、ユーザー独自の「マイメモ」自動保存機能。</li>
+                        <li><strong class="text-slate-900">AI要約 & 多言語対応:</strong> 長文記事の重要ポイント箇条書き要約、および日本語翻訳と原文の切り替え表示。</li>
+                        <li><strong class="text-slate-900">ITトレンド可視化:</strong> Chart.jsを用いた主要技術スタック（AI/LLM、React、Kube等）のトレンド指数推移グラフ（モーダル表示）。</li>
                     </ul>
                 </div>
             </section>
 
             <!-- Section 4 -->
-            <section id="section-4" class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
-                <h2 class="text-xl font-bold mb-4 flex items-center text-slate-900">
-                    <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm font-bold mr-3">4</span>
+            <section id="section-4" class="bg-white border border-slate-300 rounded-2xl p-8 shadow-sm">
+                <h2 class="text-2xl font-bold mb-4 flex items-center text-slate-900 border-b border-slate-100 pb-3">
+                    <span class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-base font-bold mr-3">4</span>
                     データ構造スキーマ (Article Object)
                 </h2>
-                <div class="bg-slate-900 text-slate-100 p-4 rounded-xl text-xs font-mono overflow-x-auto">
+                <div class="bg-slate-900 text-slate-100 p-5 rounded-xl text-sm font-mono overflow-x-auto leading-relaxed shadow-inner">
 <pre>{
   "id": "string (一意の識別子)",
   "region": "string ('jp' または 'global')",
@@ -120,24 +120,24 @@
             </section>
 
             <!-- Section 5 -->
-            <section id="section-5" class="bg-white border border-slate-200 rounded-2xl p-8 shadow-sm">
-                <h2 class="text-xl font-bold mb-4 flex items-center text-slate-900">
-                    <span class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm font-bold mr-3">5</span>
+            <section id="section-5" class="bg-white border border-slate-300 rounded-2xl p-8 shadow-sm">
+                <h2 class="text-2xl font-bold mb-4 flex items-center text-slate-900 border-b border-slate-100 pb-3">
+                    <span class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-base font-bold mr-3">5</span>
                     技術スタック & 非機能要件
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-600">
-                    <div>
-                        <h3 class="font-bold text-slate-800 mb-2">技術スタック</h3>
-                        <ul class="list-disc list-inside space-y-1">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-base text-slate-800">
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-slate-900 text-lg mb-3">技術スタック</h3>
+                        <ul class="list-disc list-inside space-y-2 text-slate-700">
                             <li>Markup: HTML5 / Tailwind CSS (v3)</li>
                             <li>Icons: Lucide Icons</li>
                             <li>Chart: Chart.js</li>
                             <li>Script: Vanilla JavaScript (SPA設計)</li>
                         </ul>
                     </div>
-                    <div>
-                        <h3 class="font-bold text-slate-800 mb-2">非機能要件</h3>
-                        <ul class="list-disc list-inside space-y-1">
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <h3 class="font-bold text-slate-900 text-lg mb-3">非機能要件</h3>
+                        <ul class="list-disc list-inside space-y-2 text-slate-700">
                             <li>ダークモード対応（Class toggle）</li>
                             <li>スムーズなスライドパネルアニメーション</li>
                             <li>ローカルステートによる高速な応答性</li>
@@ -147,7 +147,7 @@
             </section>
         </div>
 
-        <footer class="mt-12 pt-6 border-t border-slate-200 text-center text-xs text-slate-400">
+        <footer class="mt-12 pt-6 border-t border-slate-300 text-center text-sm font-medium text-slate-600">
             &copy; 2026 TechFeed Complete Pro Edition. All Rights Reserved.
         </footer>
     </div>
