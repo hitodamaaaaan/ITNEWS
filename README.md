@@ -9,11 +9,12 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-slate-100 text-slate-900 font-sans leading-relaxed text-base">
+
     <div class="max-w-5xl mx-auto px-6 py-12">
         <!-- Header -->
         <header class="border-b border-slate-300 pb-6 mb-8 flex items-center justify-between">
             <div>
-                <span class="text-xs font-bold px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">System Specification v1.0</span>
+                <span class="text-xs font-bold px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">System Specification v1.3</span>
                 <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight mt-3 text-slate-900">TechFeed Complete システム仕様書</h1>
                 <p class="text-base text-slate-700 mt-2 font-medium">ITニュース収集・トレンド分析プラットフォーム 要件定義および基本設計書</p>
             </div>
@@ -43,8 +44,9 @@
                     システム概要 & 目的
                 </h2>
                 <div class="space-y-4 text-slate-800 text-base leading-loose">
-                    <p><strong class="text-slate-900">目的:</strong> エンジニア向けに最適化されたITニュース・技術トレンド収集プラットフォームを提供する。多言語ソース（日本・グローバル）からの情報集約、AIによる要約、およびユーザーごとの効率的な情報管理（ブックマーク・既読管理・個人メモ）を単一のWebインターフェース上で実現する[cite: 1]。</p>
-                    <p><strong class="text-slate-900">対象ユーザー:</strong> ITエンジニア、開発者、テックリード、インフラエンジニアなど、最新技術動向を迅速にキャッチアップしたい個人プロフェッショナル[cite: 1]。</p>
+                    <p><strong class="text-slate-900">目的:</strong> エンジニア向けに最適化されたITニュース・技術トレンド収集プラットフォームを提供する。多言語ソースからの情報集約、ローカル環境でのAIによる要約、およびユーザーごとの情報管理を単一の<strong>デスクトップアプリケーション（Tauri）</strong>上で実現する。</p>
+                    <p><strong class="text-slate-900">情報収集元:</strong> 外部ニュースソースとして「GNews API」を活用し、クラウドのサーバー側で定期的に記事データを取得・蓄積してクライアントへ配信する。</p>
+                    <p><strong class="text-slate-900">対象ユーザー:</strong> ITエンジニア、開発者、テックリードなど、最新技術動向を迅速にキャッチアップしたいプロフェッショナル。</p>
                 </div>
             </section>
 
@@ -55,19 +57,19 @@
                     画面レイアウト・UI設計
                 </h2>
                 <div class="space-y-4 text-slate-800 text-base leading-relaxed">
-                    <p>本システムはモダンな3カラムダッシュボードUI（デスクトップ最適化 / レスポンシブ対応）を採用しています[cite: 1]。</p>
+                    <p>本システムはモダンな3カラムダッシュボードUI（デスクトップ最適化）を採用しています。</p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4">
                         <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
                             <h3 class="font-bold text-slate-900 text-lg mb-2">左サイドバー</h3>
-                            <p class="text-sm text-slate-700 leading-relaxed">ロゴ、ダークモード、日本/グローバル切替タブ、カテゴリ一覧、ビューフィルタ（すべて・ブックマーク・既読・トレンド）[cite: 1]。</p>
+                            <p class="text-sm text-slate-700 leading-relaxed">ロゴ、ダークモード切替、日本/グローバル切替、カテゴリ一覧、ビューフィルタ（すべて・ブックマーク・既読・トレンド）。</p>
                         </div>
                         <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
                             <h3 class="font-bold text-slate-900 text-lg mb-2">中央メインコンテンツ</h3>
-                            <p class="text-sm text-slate-700 leading-relaxed">インクリメンタル検索バー、期間フィルタ、フィード更新、サムネイル付き記事一覧カード[cite: 1]。</p>
+                            <p class="text-sm text-slate-700 leading-relaxed">インクリメンタル検索バー、期間フィルタ、フィード更新、サムネイル付き記事一覧カード。</p>
                         </div>
                         <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
                             <h3 class="font-bold text-slate-900 text-lg mb-2">右スライドパネル</h3>
-                            <p class="text-sm text-slate-700 leading-relaxed">記事詳細、言語切替（日本語/原文）、AIローカル要約、マイメモ入力欄（自動保存）、関連記事リンク[cite: 1]。</p>
+                            <p class="text-sm text-slate-700 leading-relaxed">記事詳細、言語切替、AIローカル要約、マイメモ入力欄（自動保存）、関連記事リンク。</p>
                         </div>
                     </div>
                 </div>
@@ -81,11 +83,10 @@
                 </h2>
                 <div class="space-y-3 text-slate-800 text-base">
                     <ul class="list-disc list-inside space-y-3 leading-relaxed">
-                        <li><strong class="text-slate-900">リージョン管理:</strong> 国内テックブログとグローバルメディア（Hacker News等）のスコープ切り替え[cite: 1]。</li>
-                        <li><strong class="text-slate-900">検索・フィルタリング:</strong> キーワード（タイトル・ソース・タグ）および期間（24時間以内/7日以内/全期間）による絞り込み[cite: 1]。</li>
-                        <li><strong class="text-slate-900">パーソナライズ管理:</strong> 詳細パネル表示に伴う自動既読化、ワンクリックのブックマーク登録、ユーザー独自の「マイメモ」自動保存機能[cite: 1]。</li>
-                        <li><strong class="text-slate-900">AI要約 & 多言語対応:</strong> 長文記事の重要ポイント箇条書き要約、および日本語翻訳と原文の切り替え表示[cite: 1]。</li>
-                        <li><strong class="text-slate-900">ITトレンド可視化:</strong> Chart.jsを用いた主要技術スタック（AI/LLM、React、Kube等）のトレンド指数推移グラフ（モーダル表示）[cite: 1]。</li>
+                        <li><strong class="text-slate-900">記事収集・API管理 (GNews API):</strong> GNews APIを利用して記事情報を収集。API制限を回避するため、クラウドのサーバー側で定期バッチ処理としてデータを取得し、MariaDBにキャッシュしてクライアントへ配信する。</li>
+                        <li><strong class="text-slate-900">アカウント・ブックマーク管理 (独自認証):</strong> <strong>専用のログインIDとパスワードによる認証機能</strong>を実装。自動既読化、ワンクリックのブックマーク、独自の「マイメモ」をリモートのWebサーバー側（MariaDB）へ同期・永続化する。</li>
+                        <li><strong class="text-slate-900">AI要約 & 多言語対応 (ローカル実行):</strong> ユーザーのPC上で動作する軽量なAIモデルを利用して長文記事を要約する。<strong>アプリの初回起動時にAIモデル本体をダウンロード・インストールする設計</strong>とし、以後はサーバーへのデータ送信なしで安全かつ高速なローカル推論を実現する。</li>
+                        <li><strong class="text-slate-900">ITトレンド可視化 (自前集計):</strong> データベースに蓄積された記事群から、主要技術スタック（AI/LLM、React、Kube等）の出現回数をサーバー側の日次バッチで独自カウント。結果をChart.jsでトレンド推移グラフとして表示する。</li>
                     </ul>
                 </div>
             </section>
@@ -94,29 +95,39 @@
             <section id="section-4" class="bg-white border border-slate-300 rounded-2xl p-8 shadow-sm">
                 <h2 class="text-2xl font-bold mb-4 flex items-center text-slate-900 border-b border-slate-100 pb-3">
                     <span class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-base font-bold mr-3">4</span>
-                    データ構造スキーマ (Article Object)
+                    データ構造スキーマ
                 </h2>
-                <!-- 背景を明るいグレー(bg-slate-100)にし、文字を濃い色(text-slate-900)にしてコントラストを改善 -->
-                <div class="bg-slate-100 border border-slate-300 text-slate-900 p-5 rounded-xl text-sm font-mono overflow-x-auto leading-relaxed shadow-inner">
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2">Article Object (記事データ)</h3>
+                        <div class="bg-slate-100 border border-slate-300 text-slate-900 p-5 rounded-xl text-sm font-mono overflow-x-auto leading-relaxed shadow-inner">
 <pre>{
   "id": "string (一意の識別子)",
   "region": "string ('jp' または 'global')",
-  "category": "string (カテゴリID)",
-  "title": "string (日本語タイトル)",
-  "titleOrig": "string (原文タイトル)",
+  "title": "string (タイトル)",
+  "description": "string (GNews API概要文)",
   "source": "string (情報源・メディア名)",
-  "date": "string (ISO8601日時)",
-  "image": "string (サムネイル画像URL)",
-  "bookmarked": "boolean (ブックマーク状態)",
-  "read": "boolean (既読状態)",
-  "summaryJa": ["string"],
-  "summaryOrig": ["string"],
-  "contentJa": "string",
-  "contentOrig": "string",
-  "tags": ["string"],
-  "memo": "string",
-  "relatedIds": ["string"]
+  "url": "string (元記事URL)",
+  "date": "string (ISO8601日時)"
 }</pre>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-2">User Object (ユーザー・ブックマークデータ)</h3>
+                        <div class="bg-slate-100 border border-slate-300 text-slate-900 p-5 rounded-xl text-sm font-mono overflow-x-auto leading-relaxed shadow-inner">
+<pre>{
+  "userId": "string (ログインID)",
+  "passwordHash": "string (ハッシュ化パスワード)",
+  "bookmarkedArticleIds": ["string"],
+  "readArticleIds": ["string"],
+  "memos": {
+    "articleId": "string (メモ内容)"
+  }
+}</pre>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -124,24 +135,32 @@
             <section id="section-5" class="bg-white border border-slate-300 rounded-2xl p-8 shadow-sm">
                 <h2 class="text-2xl font-bold mb-4 flex items-center text-slate-900 border-b border-slate-100 pb-3">
                     <span class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-base font-bold mr-3">5</span>
-                    技術スタック & 非機能要件
+                    技術スタック & アーキテクチャ
                 </h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-base text-slate-800">
                     <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
-                        <h3 class="font-bold text-slate-900 text-lg mb-3">技術スタック</h3>
+                        <h3 class="font-bold text-slate-900 text-lg mb-3">クライアント側 (デスクトップアプリ)</h3>
                         <ul class="list-disc list-inside space-y-2 text-slate-700">
-                            <li>Markup: HTML5 / Tailwind CSS (v3)[cite: 1]</li>
-                            <li>Icons: Lucide Icons[cite: 1]</li>
-                            <li>Chart: Chart.js[cite: 1]</li>
-                            <li>Script: Vanilla JavaScript (SPA設計)[cite: 1]</li>
+                            <li>UI / View: React + Tailwind CSS (v3)</li>
+                            <li>ネイティブ基盤: Tauri (Rust)</li>
+                            <li>チャート描画: Chart.js</li>
+                            <li>AI推論処理: アプリ初回起動時にモデルをローカルストレージへDLし、TauriのRust側またはWebGPU経由で実行。</li>
                         </ul>
                     </div>
                     <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
-                        <h3 class="font-bold text-slate-900 text-lg mb-3">非機能要件</h3>
+                        <h3 class="font-bold text-slate-900 text-lg mb-3">サーバー側 (クラウド環境)</h3>
                         <ul class="list-disc list-inside space-y-2 text-slate-700">
-                            <li>ダークモード対応（Class toggle）[cite: 1]</li>
-                            <li>スムーズなスライドパネルアニメーション[cite: 1]</li>
-                            <li>ローカルステートによる高速な応答性[cite: 1]</li>
+                            <li>APIサーバー: Rust (Axum または Actix-web)</li>
+                            <li>データベース: MariaDB (記事キャッシュ、ユーザーデータ保存)</li>
+                            <li>バッチ処理: GNews APIからの記事取得、トレンド集計用の定期実行タスク</li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 md:col-span-2">
+                        <h3 class="font-bold text-slate-900 text-lg mb-3">セキュリティ・非機能要件</h3>
+                        <ul class="list-disc list-inside space-y-2 text-slate-700">
+                            <li><strong class="text-slate-900">役割の完全分離:</strong> Tauriアプリ（クライアント）からMariaDBへの直接接続は禁止。必ずクラウド上のRust APIサーバーを介してセキュアな通信（HTTPS通信とトークン認証）を行う。</li>
+                            <li><strong class="text-slate-900">認証セキュリティ:</strong> ユーザーのパスワードは平文で保存せず、サーバー側で適切にハッシュ化（Argon2等）して管理する。</li>
+                            <li><strong class="text-slate-900">APIキー保護:</strong> GNews APIのシークレットキーはクライアントアプリ内に含めず、サーバー側の環境変数で安全に管理する。</li>
                         </ul>
                     </div>
                 </div>
@@ -149,8 +168,12 @@
         </div>
 
         <footer class="mt-12 pt-6 border-t border-slate-300 text-center text-sm font-medium text-slate-600">
-            &copy; 2026 TechFeed Complete Pro Edition. All Rights Reserved.[cite: 1]
+            &copy; 2026 TechFeed Complete Pro Edition. All Rights Reserved.
         </footer>
     </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
